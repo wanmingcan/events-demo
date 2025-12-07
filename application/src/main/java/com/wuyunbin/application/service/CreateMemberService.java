@@ -22,7 +22,7 @@ public class CreateMemberService implements CreateMemberUseCase {
         // 获取一个Member领域模型,已通过模拟的数据实现
         // 调用领域模型提供的持久化方法
         memberRepository.save(member);
-        //添加事件
+
         member.create();
 
         List<Object> events = member.pullDomainEvents();

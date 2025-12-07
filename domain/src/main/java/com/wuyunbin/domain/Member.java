@@ -11,10 +11,12 @@ import java.util.List;
 public class Member {
     private Long id;
     private String name;
+    private String password;
 
     private List<Object> domainEvents=new ArrayList<>();
 
     public void create(){
+
         addEvent(new CreateMemberEvent(this.id,this.name));
     }
 
